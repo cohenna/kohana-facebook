@@ -14,7 +14,7 @@ class Facebook_Auth_ORM extends Auth_ORM
 	 */
 	public function logged_in($role = NULL)
 	{
-		$user = $this->session->get($this->config['session_key']);
+		$user = $this->_session->get($this->_config['session_key']);
 
 		if (! (is_object($user) AND $user instanceof Model_User AND $user->loaded()))
 		{
